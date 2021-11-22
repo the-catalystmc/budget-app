@@ -1,0 +1,26 @@
+<div class="center">
+  <div>
+ <% flash.each do |type, msg| %>
+      <% if type == 'notice' %>
+        <div class="flash-notice">
+          <%= msg %>
+        </div>
+      <% end %>
+        <% if type == 'success' %>
+        <div class="flash-notice">
+          <%= msg %>
+        </div>
+      <% end %>
+      <% if type == 'error' %>
+        <div class="flash-error">
+          <%= msg %>
+        </div>
+      <% end %>
+      <% if type == 'alert' %>
+        <div class="flash-error">
+          <%= msg %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
