@@ -1,0 +1,10 @@
+<h1 class="text-center"> <%= @group.name %> </h1>
+<h2 class="text-center">Total: <span><%= @group.total_expenses %></span></h2>
+
+<div>
+  <% @reports.each do |report| %>
+    <%= render 'report_card', report: report%>
+  <% end %>
+</div>
+
+<%= button_to 'New Transaction', new_report_path,  method: :get, class: 'new-cat-btn' %>
