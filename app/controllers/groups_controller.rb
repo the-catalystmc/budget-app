@@ -30,4 +30,10 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
     @reports = @group.reports
   end
+
+  private
+
+  def group_params
+    params.require(:group).permit(:name, :icon)
+  end
 end

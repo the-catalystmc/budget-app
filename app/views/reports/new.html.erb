@@ -1,0 +1,18 @@
+<%= form_with model: @report, url: reports_path, method: :post, local: true, scope: :report do |f| %>
+  <div>
+  <%= f.label :name %>
+
+  <%= f.text_field :name, size: "50x12",
+placeholder: "Write the name here..."
+  %>
+</div>
+
+<div>
+  <%= f.label :amount %>
+
+  <%= f.text_field :amount, size: "50x12",
+placeholder: "Write your amount here..."
+  %>
+</div>
+<%= f.submit "Submit" %>
+<% end %>

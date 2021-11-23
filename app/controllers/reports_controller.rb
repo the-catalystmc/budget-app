@@ -17,4 +17,10 @@ class ReportsController < ApplicationController
       render :new
     end
   end
+
+  private
+
+  def report_params
+    params.require(:report).permit(:name, :amount)
+  end
 end
