@@ -1,18 +1,19 @@
 <%= form_with model: @report, url: reports_path, method: :post, local: true, scope: :report do |f| %>
+   <div>
+    <%= f.label :name %>
+    <%= f.text_field :name, placeholder: "Write the name here..."  %>
+  </div>
+
+  <% current_user.groups.each do |group| %>
+    <%= f.label group.name %>: 
+    <%= check_box_tag "groups[]", group.id %>
+  <% end %>
+
   <div>
-  <%= f.label :name %>
+    <%= f.label :amount %>
+    <%= f.text_field :amount, placeholder: "Write your amount here..."  %>
+  </div>
 
-  <%= f.text_field :name, size: "50x12",
-placeholder: "Write the name here..."
-  %>
-</div>
-
-<div>
-  <%= f.label :amount %>
-
-  <%= f.text_field :amount, size: "50x12",
-placeholder: "Write your amount here..."
-  %>
-</div>
-<%= f.submit "Submit" %>
+  <%= hidden_field_tag :group_id, @group.id %>
+  <%= f.submit "Save" %>
 <% end %>

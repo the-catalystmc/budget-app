@@ -7,4 +7,4 @@
   <% end %>
 </div>
 
-<%= button_to 'New Transaction', new_report_path,  method: :get, class: 'new-cat-btn' %>
+<%= link_to 'New Transaction', new_report_path(group_id: @group),  method: :get, class: 'new-cat-btn' %>

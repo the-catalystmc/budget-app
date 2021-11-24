@@ -28,7 +28,7 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @reports = @group.reports
+    @reports = @group.reports.order(created_at: :desc)
   end
 
   private
