@@ -1,3 +1,9 @@
-<h1 class="project-name">Budget Me</h1>
-<%= button_to 'LOG IN', new_user_session_path, method: :get, class: 'sign-up-btn' %>
-<%= button_to 'SIGN UP', new_user_registration_path, method: :get, class: 'sign-up-btn' %>
+<div class="home-page">
+  <div class="title-cont">
+    <h1 class="home-title">Budget Me</h1>
+  </div>
+  <div class="home-buttons">
+    <%= button_to 'LOG IN', new_user_session_path, method: :get, class: 'log-in-btn' %>
+    <%= button_to 'SIGN UP', new_user_registration_path, method: :get, class: 'sign-up-btn' %>
+  </div>
+</div>
