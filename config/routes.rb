@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   resources :reports
   resources :groups
+
+  get '/non_authorized', to: 'application#non_authorized'
 end
