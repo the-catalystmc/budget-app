@@ -7,11 +7,12 @@
   <h2> <%= @group.total_expenses %> </h2>
 </div>
 
-<div>
+<div class="trans-holder">
   <% @reports.each do |report| %>
     <%= render 'report_card', report: report%>
   <% end %>
 </div>
-
-<%= link_to 'New Transaction', new_report_path(group_id: @group),  method: :get, class: 'new-cat-btn' %>
+<div class="cat-button">
+<%= link_to 'New Transaction', new_report_path(group_id: @group),  method: :get, class: 'btn2' %>
+</div>
 </div>

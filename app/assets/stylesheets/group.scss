@@ -52,11 +52,46 @@
     height: 65px;
     color: white;
     background-color: #5fb523;
+
+}
+
+.btn2 {
+    font-size: 20px;
+    border: white 2px solid;
+    width: 90%;
+    height: 65px;
+    color: white;
+    background-color: #5fb523;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .trans-cont {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(235, 235, 235);
 
     .totals {
-        
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 10px;
+        background: white;  
+    }
+
+    .trans-holder {
+        padding: 10px;
+        overflow-y: scroll;
+        height: 65%;
+    }
+
+    .trans {
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 10px;
+        margin: 10px 0px;
     }
 }
