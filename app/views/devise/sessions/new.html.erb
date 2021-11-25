@@ -1,7 +1,7 @@
 <header class='relative'>
   <div class="navbar-cont"></div>
   <nav class="navbar">
-    <%= link_to :back, class: "back" do %>
+    <%= link_to root_url, class: "back" do %>
       <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
       </svg>
@@ -10,6 +10,7 @@
   <input type="submit" value="Log In" form="new_user" class='log-in'>
   </nav>
 </header>
+<div class="form">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.email_field :email, autofocus: true, placeholder: "Email", autocomplete: "email", class: "email" %>
@@ -29,4 +30,5 @@
 <%= render "devise/shared/links" %>
 </div>
 <% end %>
+</div>
 
