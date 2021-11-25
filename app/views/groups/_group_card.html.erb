@@ -1,7 +1,9 @@
 <%= link_to group_path(group) do %>
   <div class="cat">
     <img src=<%= group.icon %> width='60' />
-    <h3><%= group.name %></h3>
-    <h3>$ <%= group.total_expenses %></h3>
+    <div class="cat-info">
+      <h3><%= group.name %></h3>
+      <h3  class="cat-expense"> $<%=group.total_expenses %></h3>
+    </div>
   </div>
 <% end %>
