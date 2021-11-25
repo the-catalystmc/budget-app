@@ -19,10 +19,10 @@ user_2 = User.create!(
   password_confirmation: 'password'
 )
 
-food = Group.create(name: 'Food', icon: '', user_id: user_1.id)
-bills = Group.create(name: 'Bills', icon: '', user_id: user_1.id)
-outing = Group.create(name: 'Outing', icon: '', user_id: user_1.id)
-travel = Group.create(name: 'Travel', icon: '', user_id: user_1.id)
+food = Group.create(name: 'Food', icon: 'https://ibb.co/12vPtLK', user_id: user_1.id)
+bills = Group.create(name: 'Bills', icon: 'https://ibb.co/12vPtLK', user_id: user_1.id)
+outing = Group.create(name: 'Outing', icon: 'https://ibb.co/12vPtLK', user_id: user_1.id)
+travel = Group.create(name: 'Travel', icon: 'https://ibb.co/12vPtLK', user_id: user_1.id)
 
 burger = Report.create(name: 'Burger', amount: 5, author_id: user_1.id)
 movie = Report.create(name: 'Movie', amount: 10, author_id: user_1.id)

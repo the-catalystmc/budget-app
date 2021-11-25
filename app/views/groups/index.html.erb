@@ -1,11 +1,17 @@
-<%= render 'navbar', page: "CATEGORIES"%>  
-</div>
-<h2 class="text-center">Total: <span><%= @total %></span></h2>
+<div class="cat-cont">
+  <%= render 'navbar', page: "CATEGORIES"%>  
 
-<div>
-  <% @groups.each do |group| %>
-    <%= render 'group_card', group: group%>
-  <% end %>
-</div>
+  <div class="totals">
+    <h2 class="text-center">Total: </h2>
+    <h2>$<%= @total %></h2>
+  </div>
 
-<%= button_to 'New categories', new_group_path,  method: :get, class: 'new-cat-btn' %>
+  <div class="cat-holder">
+    <% @groups.each do |group| %>
+      <%= render 'group_card', group: group%>
+    <% end %>
+  </div>
+  <div class="cat-button">
+    <%= button_to 'NEW CATEGORY', new_group_path,  method: :get, class: 'new-cat-btn' %>
+  </div>
+</div>
