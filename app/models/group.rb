@@ -6,7 +6,7 @@ class Group < ApplicationRecord
     total = 0
     reports.each { |r| total += r.amount }
     total
-  end 
+  end
 
   validates :name, presence: true
   validates :icon, presence: true
