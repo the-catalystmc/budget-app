@@ -1,0 +1,28 @@
+<header class='relative'>
+  <div class="navbar-cont"></div>
+  <nav class="navbar">
+    <%= link_to :back, class: "back" do %>
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+      </svg>
+    <% end %>
+    <h2 class="header">ADD CATEGORY</h2>
+  <input type="submit" value="Save" form="add-group-form" class='log-in'>
+  </nav>
+</header>
+
+<div class="form">
+<%= form_with model: @group, url: groups_path, method: :post, id: 'add-group-form', local: true, scope: :group do |f| %>
+  <div>
+  <%= f.text_field :name, size: "50x12",
+placeholder: "Name", class: "name"
+  %>
+</div>
+
+<div>
+  <%= f.text_field :icon, size: "50x12",
+placeholder: "Icon", value: "https://i.ibb.co/ysfZcX5/budget.png", class: "icon1"
+  %>
+</div>
+<% end %>
+</div>

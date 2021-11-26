@@ -1,0 +1,30 @@
+<header class='relative'>
+  <div class="navbar-cont"></div>
+  <nav class="navbar">
+    <%= link_to :back, class: "back" do %>
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+      </svg>
+    <% end %>
+    <h2 class="header">ADD TRANSACTION</h2>
+  <input type="submit" value="Save" form="add-report-form" class='log-in'>
+  </nav>
+</header>
+
+<%= form_with model: @report, url: reports_path, method: :post, id: 'add-report-form', local: true, scope: :report do |f| %>
+   <div>
+    <%= f.text_field :name, placeholder: "Name", class: "name1" %> 
+  </div>
+
+  <% current_user.groups.each do |group| %>
+    <%= f.label group.name %>: 
+    <%= check_box_tag "groups[]", group.id %>
+  <% end %>
+
+  <div>
+    <%= f.text_field :amount, placeholder: "Amount", class: "name1" %>
+  </div>
+
+  <%= hidden_field_tag :group_id, @group.id %>
+  <%= f.submit "Save" %>
+<% end %>
