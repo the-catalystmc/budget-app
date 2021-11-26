@@ -1,6 +1,6 @@
-# Recipe App
+# Budget App
 
-The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app allows you to make them public so anyone can access them.
+The Budget App is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
 ![imagen](./home.jpeg)
 
@@ -18,8 +18,7 @@ The Recipe app keeps track of all your recipes, ingredients, and inventory. It w
 1. Clone the repo
 
    ```sh
-   git@github.com:sevinchek/blog-app.git
-   ```
+git clone git@github.com:the-catalystmc/budget-app.git   ```
 
 ### Usage
 
@@ -58,7 +57,7 @@ The Recipe app keeps track of all your recipes, ingredients, and inventory. It w
 1. For testing run:
 
    ```sh
-   rspec spec/* --format doc
+   rspec
    ```
 
 ## Acknowledgements
